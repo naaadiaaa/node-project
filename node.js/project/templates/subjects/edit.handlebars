@@ -1,0 +1,106 @@
+  <!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       body {
+            font-family:'Times New Roman', Times, serif;
+            background-color: rgba(2, 42, 48, 0.603);
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+          color: rgb(94, 19, 94);
+            text-align: center;
+            margin-top: 10px;
+            margin-top: 10px;
+        }
+        form{
+           background-color: rgba(0, 0, 0, 0.082);
+          width:70%;
+          padding: 30px;
+          margin-left:200px;
+          margin-top: 50px;
+          border-style:hidden;
+        }
+        label{
+          margin-left: 70px;
+        }
+        .form-control{
+          width: 80%;
+          margin-left: 70px;
+          
+        }
+        .btn-success{
+          background-color: white;
+          color: rgb(94, 19, 94);;
+          width: 150px;
+          border: 2px ;
+          border-radius: 33px;
+          margin-left:300px;
+        }
+        .btn-success:hover{
+         background-color:rgb(94, 19, 94);
+         color: white;
+        }
+    .form-select{
+        width: 80%;
+          margin-left: 50px;
+           margin-left: 70px;
+    }
+    </style>
+</head>
+
+<body>
+<h1>Edit {{subject.subName}}</h1>
+
+<form action="/subjects/{{subject._id}}?_method=PUT" method="POST">
+
+  <div>
+    <label for="">Name</label>
+
+    <input type="text" class="form-control" name="subName" value="{{subject.subName}}" />
+  </div>
+
+  <div>
+    <label for="">Code</label>
+
+    <input type="text" class="form-control" name="subCode" value="{{subject.subCode}}"/>
+  </div>
+ 
+
+
+
+
+  <div>
+    <label for="">Department</label> 
+ <select id="" class="form-select" name="subDepartment" >
+        {{#each departments}}
+        <option value="{{_id}}">{{name}}</option>
+        
+        {{/each}}
+ 
+      </select>
+
+
+  </div>
+
+<div>
+    <label for="">Previous Subject</label>
+
+    <input type="text" class="form-control" name="subPrevious" value="{{subject.subPrevious}}"/>
+  </div>
+  
+  
+
+  <div class="mt-3">
+    <button class="btn btn-success" type="submit">save</button>
+  </div>
+
+</form>
+</body>
+</html>

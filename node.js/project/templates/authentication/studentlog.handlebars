@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menofia University Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(2, 42, 48, 0.603);
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+            margin-top: 10px;
+        }
+        form{
+          background-color: rgba(240, 248, 255, 0.082);
+          width:70%;
+          padding: 30px;
+          margin-left: 130px;
+          margin-top: 50px;
+          border-style: groove;
+        }
+        label{
+          margin-left: 60px;
+        }
+        .form-control{
+          width: 80%;
+          margin-left: 50px;
+          
+        }
+        .btn-success{
+          background-color: white;
+          color: #f72323;
+          width: 200px;
+          border: 2px ;
+          border-radius: 33px;
+          margin-left: 160px;
+        }
+        .btn-success:hover{
+         background-color: rgb(2, 82, 114);
+         color: white;
+        }
+    
+    </style>
+</head>
+
+<body>
+<h1>Login As A Student</h1>
+
+<form action="/studentlog" method="post">
+
+  <div>
+    <label for="">username</label>
+
+    <input type="text" class="form-control" name="username" />
+  </div>
+
+  <div>
+    <label for="">password</label>
+
+    <input type="password" class="form-control" name="password" />
+  </div>
+  
+  <div class="mt-3">
+    <button class="btn btn-success" type="submit">login</button>
+  </div>
+
+ 
+</form>
+</body>
+</html>

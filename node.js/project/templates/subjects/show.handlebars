@@ -1,0 +1,60 @@
+
+<style>
+h1{
+    font-family: 'Times New Roman', Times, serif
+
+     color: rgb(94, 19, 94);
+            
+            margin-top: 40px;
+          
+            font-weight: bold;
+
+}
+.my-1{
+    font-family: 'Times New Roman', Times, serif
+    margin-top: 10;
+    font-size:medium;
+    
+    -webkit-text-fill-color:rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.go{
+font-family: 'Times New Roman', Times, serif;
+    margin-top:70;
+    background-color:rgb(185, 160, 185);
+border-color: rgb(226, 216, 216);
+width:100px;
+border:none;
+border-radius:10%;
+height:30px;
+font-weight: bold;
+
+}
+
+</style>
+
+
+
+<h1>
+    {{subject.subName}}
+</h1>
+
+<div class="my-1">
+    Code:
+    {{subject.subCode}}
+</div>
+
+<div class="my-1">
+    Department:
+    {{subject.subDepartment.name}}
+</div>
+
+<div class="my-1">
+    Previous Subject:
+    {{subject.subPrevious}}
+</div>
+
+<div>
+  <button class="go" onclick="history.back()">Go Back</button>
+</div>
