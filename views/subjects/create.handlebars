@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddSub</title>
+</head>
+
+<body>
+    <nav aria-label="breadcrumb" class="my-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin">Admin Page</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Create Subject</li>
+        </ol>
+    </nav>
+    <form action="/admin/subjects" method="POST">
+        <div class="container my-5">
+            <div class="title text-center">
+                <h2>Create New Subject</h2>
+            </div>
+            <div class="subjectname my-2">
+                <label for="subname" class="form-label fw-bold">Subject Name</label>
+                <input type="text" id="subname" class="form-control" name="SubjectName">
+            </div>
+            <div class="subjectcode my-2">
+                <label for="code" class="form-label fw-bold">Subject Code</label>
+                <input type="text" id="code" class="form-control" name="SubjectCode">
+            </div>
+            <div class="subDepartment my-2">
+                <label for="Department" class="form-label fw-bold">Department</label>
+                <select id="Department" class="form-select" name="Department">
+                    <option selected disabled>Select a department</option>
+                    {{#each departments}}
+                    <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="subDepartment my-2">
+                <label for="Previoussubjects" class="form-label fw-bold">Previous subjects</label>
+                <input type="text" id="Previoussubjects" class="form-control" name="previousSubjects">
+            </div>
+            <div class="subDepartment my-2">
+                <label for="Doctor Name" class="form-label fw-bold">Doctor Name</label>
+                <input type="text" id="Doctor Name" class="form-control" name="Doctor Name">
+            </div>
+            <button type="submit" class="btn btn-primary my-2">Add Subject</button>
+    </form>
+    </div>
+</body>
+
+</html>

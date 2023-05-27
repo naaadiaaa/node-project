@@ -1,0 +1,30 @@
+<div style="text-align: center;">
+
+    <h1 style="margin: 20px;">Doctor Accounts</h1>
+
+<div class="my-2">
+    <a href="/admin/doctorAcc/create"><button class="btn btn-primary btn-lg btn-block" style="margin: 20px;"> Add A New Doctor Accounts</button> </a>
+</div>
+
+<table class="table ">
+    <tr class="bg-primary">
+        <td >Username</td>
+        <td>Password</td>
+        
+    </tr>
+    
+    {{#each subviwe}}
+    <tr class="table-info" >
+        <th>{{username}}</th>
+        <th >
+            <div>
+            {{password}}
+            </div>
+        </th>
+    </tr>
+    {{/each}}
+</table>
+
+
+
+</div>

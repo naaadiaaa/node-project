@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subjects</title>
+</head>
+
+<body>
+    <div class="container my-5">
+    <nav aria-label="breadcrumb" class="my-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin">Admin Page</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Subjects </li>
+        </ol>
+    </nav>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <h1><a href="/admin/subjects/create" class="btn btn-primary fw-bold">Add New Subject</a></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="subjects">
+                    {{#each subjects}}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Subject Name: {{name}}</h5>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+                                <button type="button" class="btn btn-primary"><a href="/admin/subjects/{{_id}}/edit"
+                                        class="text-decoration-none text-white"> Edit</a></button>
+                                <button type="button" class="btn btn-success"><a href="/admin/subjects/{{_id}}"
+                                        class="text-decoration-none text-white">Details</a></button>
+                            <form action="/admin/subjects/{{_id}}?_method=DELETE" method="POST">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

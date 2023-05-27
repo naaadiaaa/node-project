@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav aria-label="breadcrumb" class="my-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin">Admin Page</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Student Accounts </li>
+        </ol>
+    </nav>
+    <div style="text-align: center;">
+
+        <h1 style="margin: 20px;">Student Accounts</h1>
+
+        <div class="my-2">
+            <a href="/admin/studentAcc/create"><button class="btn btn-primary btn-lg btn-block" style="margin: 20px;">
+                    Add A
+                    New Student Accounts</button> </a>
+        </div>
+        <table class="table ">
+            <tr class="bg-primary">
+                <td>Username</td>
+                <td>Password</td>
+                <td>AcademicNumber</td>
+            </tr>
+            {{#each subviwe}}
+            <tr class="table-info">
+                <th>{{username}}</th>
+                <th>
+                    <div>
+                        {{password}}
+                    </div>
+                </th>
+                <th id="{{academicNumber}}">
+                    <div>
+                        {{academicNumber}}
+                    </div>
+                </th>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+</body>
+
+</html>

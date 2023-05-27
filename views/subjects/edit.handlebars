@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <nav aria-label="breadcrumb" class="my-4">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/admin">Admin Page</a></li>
+      <li class="breadcrumb-item"><a href="/admin/subjects">Subjects</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Edit Subject </li>
+    </ol>
+  </nav>
+
+  <div class="title my-5">
+    <h2>Edit Subject : {{subject.name}}</h2>
+  </div>
+  <form action="/admin/subjects/{{subject._id}}?_method=PUT" method="POST">
+    <div class="mb-3">
+      <label for="SubjectName" class="form-label">Subject Name</label>
+      <input type="text" class="form-control" id="SubjectName" name="SubjectName" value='{{subject.name}}'>
+    </div>
+    <div class="mb-3">
+      <label for="SubjectCode" class="form-label">Code</label>
+      <input type="text" class="form-control" value='{{subject.code}}' name="SubjectCode" id="SubjectCode">
+    </div>
+    <div class="mb-3">
+      <label for="previousSubjects" class="form-label">previousSubjects</label>
+      <input type="text" class="form-control" value='{{subject.previousSubjects}}' name="previousSubjects" id="previousSubjects">
+    </div>
+
+    <div class="subDepartment my-2">
+      <label for="Department" class="form-label fw-bold">Department</label>
+      <select id="Department" class="form-select" name="Department">
+        <option selected disabled >{{subject.department.name}}</option>
+        {{#each departments}}
+        <option value="{{_id}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">update</button>
+  </form>
+</body>
+
+</html>

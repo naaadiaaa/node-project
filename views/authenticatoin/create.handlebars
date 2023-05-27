@@ -1,0 +1,29 @@
+<h1>create new subject</h1>
+
+<form action="/doctor" method="POST">
+{{!-- name --}}
+    <div>
+        <label for="">subjectName</label>
+        <input type="text" class="form-control" name="name">
+    </div>
+     {{!--code  --}}
+    <div>
+        <label for="">code</label>
+        <input type="text" class="form-control" name="code">
+    </div>
+    {{!-- department --}}
+      {{!-- <div>
+        <label for="">department</label>
+        <select name="department" id="" class="form-select">
+            {{#each departments}}
+                <option value="{{_id}}">{{name}}</option>
+            {{/each}}
+            <option value="1">ahmed</option>
+            <option value="2">ali</option>
+        </select>
+    </div> --}}
+    <br>
+    <div>
+        <button class="btn btn-success" type="submit">save</button>
+    </div>
+</form>

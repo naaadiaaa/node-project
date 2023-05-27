@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav aria-label="breadcrumb" class="my-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin">Admin Page</a></li>
+            <li class="breadcrumb-item"><a href="/admin/studentAcc">Student Accounts</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Create Student Accounts</li>
+        </ol>
+    </nav>
+    <h1 style="text-align: center; margin:20px">Create a New Student Accounts</h1>
+
+    <form action="/admin/studentAcc" method="post">
+        {{!-- username --}}
+        <div>
+            <label for="">Username</label>
+            <input type="text" class="form-control" name="username">
+        </div>
+
+        {{!-- password --}}
+        <div class="my-2">
+            <label for="">Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+
+
+        <div class="my-2">
+            <label for="">AcademicNumber</label>
+            <input type="text" class="form-control" name="academicNumber">
+        </div>
+        <div class="my-2">
+            <button class="btn btn-outline-success my-2" type="submit">Save</button>
+        </div>
+
+    </form>
+</body>
+
+</html>

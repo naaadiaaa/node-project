@@ -1,0 +1,31 @@
+
+<h1>Subject </h1>
+ {{!-- <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <h1><a href="doctor/create" class="btn btn-primary fw-bold">Add New Subject</a></h1>
+                </div>
+            </div>
+        </div> --}}
+
+ <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-left">
+    {{#each courses}}
+    <div>
+        <h2>NameSubject: {{name}}</h2>
+        <h2>Code: {{code}}</h2>
+
+    </div>
+    <div class="text-right">
+        <button type="button" class="btn btn-danger"><a href="/upload" class="text-decoration-none text-white"> UploadeFile</a></button> 
+    </div>
+    
+    <br>
+    {{/each}}
+   </div>
+            </div>
+        </div>
+        </div>

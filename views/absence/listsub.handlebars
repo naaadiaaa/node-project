@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav aria-label="breadcrumb" class="my-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin">Admin Page</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Generate list of Absence</li>
+        </ol>
+    </nav>
+    <div class="subjects mt-4">
+        {{#each subjects}}
+        <div class="card mb-3 ">
+            <div class="card-body d-flex justify-content-between">
+                <h5 class="card-title">Subject Name: {{name}}</h5>
+                <a href="/admin/absence/list" class="btn btn-primary">Generate report</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+</body>
+
+</html>

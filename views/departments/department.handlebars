@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav aria-label="breadcrumb" class="my-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin">Admin Page</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Departments</li>
+        </ol>
+    </nav>
+    <div class="container my-5">
+        <div class="deprtmenttitle mx-auto bg-primary w-25 p-1">
+            <h2 class="text-center text-white">All Departments</h2>
+        </div>
+        <div class="cards">
+            {{#each deps}}
+            <div class="card text-center my-3">
+                <div class="card-body">
+                    <h3 class="card-title">{{name}}</h3>
+                    <h3>Code :<span class="text-primary">{{code}}</span></h3>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</body>
+
+</html>

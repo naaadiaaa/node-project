@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="conatiner my-5">
+        <nav aria-label="breadcrumb" class="my-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/admin">Admin Page</a></li>
+                <li class="breadcrumb-item"><a href="/admin/subjects">Subjects</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Subject Details </li>
+            </ol>
+        </nav>
+        <div class="subjectdetails">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h2>Subject Details</h2>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Name : {{singlesubject.name}}</h5>
+                        <h4>Previos Subjects : {{singlesubject.previousSubjects}}</h4>
+                        <p class="card-text fs-5">Department: <span class="fw-bold">{{#if
+                                singlesubject.department}}{{#if
+                                singlesubject.department.name}}{{singlesubject.department.name}}{{else}}General{{/if}}{{else}}General{{/if}}</span>
+                        </p>
+                        <a href="" class="btn btn-primary">Code : {{singlesubject.code}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
